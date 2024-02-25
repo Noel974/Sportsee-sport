@@ -1,5 +1,28 @@
-Projet SportSee 
+# Projet Projet  
 
-But du projet  
-Réalisation 
-Besoin
+
+## Sommaire
+- [Projet](#projet)
+- [Objectif](#objectif)
+- [Outils](#outils)
+
+## Projet
+Le projet XYZ est une application web destinée à simplifier la gestion des tâches quotidiennes. Il offre une interface conviviale permettant aux utilisateurs de créer, organiser et suivre leurs tâches de manière efficace.
+
+## Objectif
+L'objectif principal de ce projet est de fournir une solution intuitive et efficace pour la gestion des tâches, en offrant des fonctionnalités telles que la création de listes de tâches, la priorisation des tâches, les rappels, et bien plus encore. Nous visons à simplifier le processus de gestion des tâches pour permettre aux utilisateurs de rester organisés et productifs.
+
+## Outils
+Ce projet est développé en utilisant les technologies suivantes :
+- **Frontend** : React, [Mock](#Mock), [ServiceAPI](#ServcieAPI)
+- **Backend** : Docker
+- **Pro types** : Node.js, Express.js
+- **Base de données** : 
+- **Axios** : 
+- **Reacharts** : 
+
+## Mock
+Qu'est qu'un Mock 
+
+## ServiceAPI
+Qu'est ServiceAPI
