@@ -1,18 +1,22 @@
 import React from 'react';
+import sportsee from '../../Assets/sportsee.png';
 import {NavLink} from 'react-router-dom'; 
 
 
-const Navi = () =>{
+function Navi() {
     return (
-        <div className='Navbar'>
-            <div className='NavbarLogo'></div>
-            <div className='NavbarList'>
-                <li><NavLink href='#'>Accueil</NavLink></li>
-                <li><NavLink href='#'>Profil</NavLink></li>
-                <li><NavLink href='#'>Réglages</NavLink></li>
-                <li><NavLink href='#'>Communauté</NavLink></li>
-            </div>
-        </div>
+        <head className="header">
+  <img src={sportsee} alt="logo" />
+  <nav>
+
+          <NavLink href='/'>Accueil</NavLink>
+          <NavLink href='#'>Profil</NavLink>
+          <NavLink href='#'>Réglages</NavLink>
+          <NavLink href='#'>Communauté</NavLink>
+
+  </nav>
+        </head>
+
     );
 }
 

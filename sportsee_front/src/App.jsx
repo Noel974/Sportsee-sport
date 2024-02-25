@@ -1,20 +1,19 @@
 import React from 'react';
 import './Styles/Styles.css';
-
-import { BrowserRouter } from "react-router-dom";
-
-import Navi from './Conmponents/Navbar/Navi.jsx';
-import Slide from './Conmponents/SlideNav/Slide.jsx'
-import Profil from"./Pages/Profil.jsx";
+import { BrowserRouter as Router } from "react-router-dom";
+import Home from "./Pages/Home/Home.jsx";
+import Navi from "./Conmponents/Navbar/Navi.jsx";
+import Routeindex from"./Route/Routes.jsx";
 
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>
-      <Navi />
-     <Profil /> 
-     <Slide />
-      </BrowserRouter>
+      <Router>
+
+      <Routeindex /> 
+      <Navi/>
+      <Home/>
+      </Router>
     </div>
   );
 }

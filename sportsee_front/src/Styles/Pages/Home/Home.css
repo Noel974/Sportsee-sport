@@ -1,0 +1,14 @@
+.main {
+    max-width: 1240px;
+    margin: auto;
+}
+
+.main a {
+    margin-top: 1em;
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    margin: 1em 0;
+}

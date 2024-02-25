@@ -1,17 +1,23 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import yoga from '../../Assets/yoga.svg';
+import vtt from '../../Assets/vtt.svg';
+import poids from '../../Assets/poids.svg';
+import natation from '../../Assets/natation.svg';
+
 
 function Slide() {
-    return(
+    return (
         <div className="SlideNav">
             <div className="SlideNavList">
-            <li><NavLink href='#'>fdf</NavLink></li>
-                <li><NavLink href='#'>s</NavLink></li>
-                <li><NavLink href='#'>fgf</NavLink></li>
-                <li><NavLink href='#'>gfd</NavLink></li>
-        </div>
-        <div className="fotter">Copyright, SportSee 2024</div>
+                <ul>
+                    <li><img src={yoga} alt="yoga" /></li>
+                    <li><img src={natation} alt="yoga" /></li>
+                    <li><img src={vtt} alt="yoga" /></li>
+                    <li><img src={poids} alt="yoga" /></li>
+                </ul>
+            </div>
+            <div className="fotter">Copyright, SportSee 2024</div>
         </div>
     );
-} 
+}
 export default Slide;
