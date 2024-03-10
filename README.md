@@ -22,7 +22,7 @@ Ce projet est développé en utilisant les technologies suivantes :
 - **Reacharts** : 
 
 ## Mock
-Qu'est qu'un Mock 
+MockServiceAPI fichier qui simulent des fonctions qui fait appel au réseau. Elle permet de tester le comportement du site sans avoir besoin de l'API. 
 
 ## ServiceAPI
-Qu'est ServiceAPI
+ServiceAPI fichier qui permert de utiliser des fonctions qui fait appel au réseau. Pour cela j'uilise Axios pour récuperer des données à partir d'une API distance.

@@ -1,5 +1,8 @@
 @import "./Base/Base.css";
+
 @import "./Components/Navi/Navi.css";
 @import "./Components/SlideNav/SlideNav.css";
-@import "./Pages/Profil/Profil.css";
+@import "./Components/Profil/profil.css";
+
+@import "./Pages/ProfilPerf/ProfilPerf.css";
 @import "./Pages/Home/Home.css";

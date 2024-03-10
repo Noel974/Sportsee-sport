@@ -1,0 +1,23 @@
+/* Header */
+.profil {
+    margin-bottom: 40px;
+  }
+  
+  @media (max-width: 1203px) {
+    .profil {
+      margin-left: 2em;
+    }
+  }
+  
+  /* Title */
+  .Bienvenu {
+    font-weight: 600;
+    font-size: 48px;
+    margin-bottom: 40px;
+  }
+  
+  /* Name */
+  .name{
+    color: #ff0000;
+  }
+  

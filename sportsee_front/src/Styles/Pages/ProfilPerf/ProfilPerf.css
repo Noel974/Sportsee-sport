@@ -1,0 +1,18 @@
+.ProfilPerf {
+  display: flex;
+  margin-top: 35px;
+  margin-left: 150px;
+}
+
+@media screen and (max-width: 1250px) {
+  .ProfilPerf {
+      grid-gap: 1em; /* Déplacement de grid-gap à l'intérieur de la règle @media */
+  }
+}
+
+.contaner{
+  max-width: 1240px;
+  width: 100%;
+  margin: auto;
+  margin-top:2%;
+}

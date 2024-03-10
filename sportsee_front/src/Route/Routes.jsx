@@ -6,8 +6,8 @@ import Home from "../Pages/Home/Home";
 function Routeindex() {
   return (
     <Routes>
-      <Route exact path="/" component={Home} />
-      <Route path="/user/:id" component={ProfilPerf} />
+      <Route path="/" element={<Home />} />
+      <Route path="/user/:id" element={<ProfilPerf />} />
     </Routes>
   );
 }
