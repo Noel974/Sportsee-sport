@@ -7,7 +7,7 @@ function MyUser() {
     const {id} = useParams();
 
     useEffect(() => {
-        const fetchData = async () => {
+        const getData = async () => {
             try {
                 const response = await getUserInfos(id);
                 setData(response.data); // Stockage de la réponse de l'API
@@ -17,7 +17,7 @@ function MyUser() {
             }
         };
 
-        fetchData();
+        getData();
     }, [id]);
     
     return data;

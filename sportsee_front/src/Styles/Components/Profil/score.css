@@ -1,0 +1,33 @@
+.score {
+    position:relative;
+    width:258px;
+    height:263px;
+}
+
+.score-title{
+    position:absolute;
+    left: 20%;
+    top: 15%;
+    transform: translate(-50%, -50%);
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 24px;
+    color: #20253A;
+    font-weight: 700;
+}
+.score-text{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 15px;
+    line-height: 26px;
+    font-weight: 700;
+    text-align: center;
+    color: #74798C;
+}
+.icon-pourcent {
+    color: rgba(0, 0, 0, 0.8);
+    font-weight: 700;
+    font-size: 26px;
+}

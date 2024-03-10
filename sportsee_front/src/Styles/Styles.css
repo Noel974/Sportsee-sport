@@ -3,6 +3,10 @@
 @import "./Components/Navi/Navi.css";
 @import "./Components/SlideNav/SlideNav.css";
 @import "./Components/Profil/profil.css";
+@import "./Components/Profil/activity.css";
+@import "./Components/Profil/score.css";
+@import "./Components/Profil/average.css";
+@import "./Components/Profil/performance.css";
 
 @import "./Pages/ProfilPerf/ProfilPerf.css";
 @import "./Pages/Home/Home.css";
