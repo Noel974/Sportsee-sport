@@ -75,22 +75,3 @@ export const getUserPerformance = async (id) => {
         throw error;
     }
 };
-
-export class AxiosMock {
-    static async get(url) {
-        // Simuler la réponse de l'API en fonction de l'URL demandée
-        if (url.includes('/user/')) {
-            // Simuler des données d'utilisateur en utilisant un fichier JSON local
-            const userId = url.split('/').pop(); // Obtenir l'ID de l'utilisateur à partir de l'URL
-            try {
-                // Charger les données d'utilisateur depuis le fichier JSON
-                const userData = await axios.get(`./../../${userId}/info.json`);
-                return { data: userData.data };
-            } catch (error) {
-                // En cas d'erreur lors de la lecture du fichier JSON, renvoyer une réponse vide ou une erreur
-                console.error('Erreur lors de la lecture du fichier JSON :', error);
-                return { data: {} }; // ou throw error; selon le comportement souhaité
-            }
-        }
-}    
-}

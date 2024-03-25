@@ -6,6 +6,7 @@ import Activity from '../../Conmponents/Profil/Activity.jsx';
 import ScoreProfil from '../../Conmponents/Profil/Score.jsx';
 import AverageSsession from '../../Conmponents/Profil/AverageSessions.jsx';
 import Performance from '../../Conmponents/Profil/Performance.jsx';
+import Besoin from '../../Conmponents/Profil/Besoin.jsx';
 
 
 function ProfilPerf() {
@@ -20,6 +21,7 @@ function ProfilPerf() {
                 {/* Utilisation des informations de l'utilisateur pour afficher le composant Profil */}
                 <Profil name={data.userInfos.firstName} />
                 <div className='contenu'>
+                    <section>
                     {/* Utilisation des informations de l'utilisateur pour afficher le composant Activity */}
                     <Activity data={data.activityData} />
                     <div className='contenu-chart'>
@@ -29,6 +31,10 @@ function ProfilPerf() {
                         <Performance />
                         {/* Utilisation des informations de l'utilisateur pour afficher le composant ScoreProfil */}
                         <ScoreProfil data={data} />
+                    </div>
+                    </section>
+                    <div className='contenu-besoin'>
+                    < Besoin data={data}/>
                     </div>
                 </div>
             </div>

@@ -1,0 +1,32 @@
+.wrapper {
+    display: flex;
+    align-items: center;
+    margin: 20px 5px;
+}
+
+.icon {
+    margin-right: 10px;
+}
+
+.infos {
+    display: flex;
+    flex-direction: column;
+}
+
+.infos-data {
+    font-weight: bold;
+}
+
+.infos-text {
+    font-size: 14px;
+    color: #666;
+}
+ .key-data-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 835px;
+    flex-direction: column;
+    margin: auto;
+    margin-left:0;
+ }

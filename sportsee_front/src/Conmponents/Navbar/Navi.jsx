@@ -1,5 +1,5 @@
 import React from 'react';
-import sportsee from '../../Assets/sportsee.png';
+import sportsee from '../../Assets/Logo/sportsee.png';
 import { NavLink } from 'react-router-dom';
 
 

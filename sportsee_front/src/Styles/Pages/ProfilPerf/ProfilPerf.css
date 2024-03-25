@@ -29,3 +29,12 @@
   grid-gap:1em;
   justify-content: space-between;
 }
+.contenu-besoin{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 835px;
+  flex-direction: column;
+  margin: auto;
+  margin-left:0;
+}

@@ -1,8 +1,8 @@
 import React from "react";
-import yoga from '../../Assets/yoga.svg';
-import vtt from '../../Assets/vtt.svg';
-import poids from '../../Assets/poids.svg';
-import natation from '../../Assets/natation.svg';
+import yoga from '../../Assets/Logo/yoga.svg';
+import vtt from '../../Assets/Logo/vtt.svg';
+import poids from '../../Assets/Logo/poids.svg';
+import natation from '../../Assets/Logo/natation.svg';
 import { NavLink } from 'react-router-dom';
 
 
