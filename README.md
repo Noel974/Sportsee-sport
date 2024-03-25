@@ -20,9 +20,13 @@ Ce projet est développé en utilisant les technologies suivantes :
 - **Base de données** : 
 - **Axios** : 
 - **Reacharts** : 
+- **Env** :
 
 ## Mock
 MockServiceAPI fichier qui simulent des fonctions qui fait appel au réseau. Elle permet de tester le comportement du site sans avoir besoin de l'API. 
 
 ## ServiceAPI
 ServiceAPI fichier qui permert de utiliser des fonctions qui fait appel au réseau. Pour cela j'uilise Axios pour récuperer des données à partir d'une API distance.
+## Env
+Crée un fichier .env puis la configurer exemple : REACT_APP_IS_PROD=true
+REACT_APP_API_URL="url de l'api".

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import MyUser from "../../Hooks/Userdata.jsx";
+import MyUser from "../../Outils/Userdata.jsx";
 import Profil from '../../Conmponents/Profil/Profil';
 import Activity from '../../Conmponents/Profil/Activity.jsx';
 import ScoreProfil from '../../Conmponents/Profil/Score.jsx';

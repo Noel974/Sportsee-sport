@@ -1,6 +1,6 @@
 import React from "react";
 // import Hooks Activity Data
-import MyActivity from "../../Hooks/Activitydata";
+import MyActivity from "../../Outils/Activitydata";
 import PropTypes from 'prop-types';
 import { Bar, BarChart, CartesianGrid, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
 

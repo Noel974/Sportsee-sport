@@ -1,5 +1,7 @@
 import axios from 'axios';
 
+const API_URL = process.env.REACT_APP_API_URL;
+console.log(API_URL);
 /**
  * Fonction asynchrone pour récupérer les informations d'un utilisateur à partir de son ID.
  * @param {number} id - L'identifiant de l'utilisateur à récupérer.
@@ -8,7 +10,8 @@ import axios from 'axios';
 export const getUserInfos = async (id) => {
     try {
         // Effectuer une requête GET vers l'API pour récupérer les informations de l'utilisateur.
-        const res = await axios.get(`http://localhost:3000/user/${id}`);
+        const res = await axios.get(API_URL+`/user/${id}`);
+
 
         // Afficher un message dans la console lorsque les données de l'utilisateur sont récupérées avec succès.
         console.log('Données utilisateur récupérées avec succès :', res.data);
@@ -30,7 +33,7 @@ export const getUserInfos = async (id) => {
  */
 export const getUserActivity = async (id) => {
     try {
-        const res = await axios.get(`http://localhost:3000/user/${id}/activity`);
+        const res = await axios.get(API_URL+`/user/${id}/activity`);
         console.log('Activité de l\'utilisateur récupérée avec succès :', res.data);
         return res.data;
     } catch (error) {
@@ -47,7 +50,7 @@ export const getUserActivity = async (id) => {
  */
 export const getUserAverageSessions = async (id) => {
     try {
-        const res = await axios.get(`http://localhost:3000/user/${id}/average-sessions`);
+        const res = await axios.get(API_URL+`/user/${id}/average-sessions`);
         console.log('Session moyenne de l\'utilisateur récupérée avec succès :', res.data);
         return res.data;
     } catch (error) {
@@ -64,7 +67,7 @@ export const getUserAverageSessions = async (id) => {
  */
 export const getUserPerformance = async (id) => {
     try {
-        const res = await axios.get(`http://localhost:3000/user/${id}/performance`);
+        const res = await axios.get(API_URL+`/user/${id}/performance`);
         console.log('Performances de l\'utilisateur récupérées avec succès :', res.data);
         return res.data;
     } catch (error) {
@@ -72,3 +75,22 @@ export const getUserPerformance = async (id) => {
         throw error;
     }
 };
+
+export class AxiosMock {
+    static async get(url) {
+        // Simuler la réponse de l'API en fonction de l'URL demandée
+        if (url.includes('/user/')) {
+            // Simuler des données d'utilisateur en utilisant un fichier JSON local
+            const userId = url.split('/').pop(); // Obtenir l'ID de l'utilisateur à partir de l'URL
+            try {
+                // Charger les données d'utilisateur depuis le fichier JSON
+                const userData = await axios.get(`./../../${userId}/info.json`);
+                return { data: userData.data };
+            } catch (error) {
+                // En cas d'erreur lors de la lecture du fichier JSON, renvoyer une réponse vide ou une erreur
+                console.error('Erreur lors de la lecture du fichier JSON :', error);
+                return { data: {} }; // ou throw error; selon le comportement souhaité
+            }
+        }
+}    
+}
