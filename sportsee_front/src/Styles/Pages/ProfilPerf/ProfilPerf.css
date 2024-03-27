@@ -6,30 +6,32 @@
 
 @media screen and (max-width: 1250px) {
   .ProfilPerf {
-      grid-gap: 1em; /* Déplacement de grid-gap à l'intérieur de la règle @media */
+    grid-gap: 1em;
   }
 }
 
-.contaner{
+.Profil {
   max-width: 1240px;
   width: 100%;
   margin: auto;
-  margin-top:2%;
+  margin-top: 2%;
 }
-.contenu{
-  display:flex;
+
+.contenu-besoin {
+  display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   width: 100%;
 }
-.contenu-chart{
+.contenu-chart {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap:1em;
   justify-content: space-between;
 }
-.contenu-besoin{
+
+.aside {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -37,4 +39,11 @@
   flex-direction: column;
   margin: auto;
   margin-left:0;
+}
+@media (max-width: 1208px) {
+  .aside {
+      flex-direction: row;
+      margin: auto 0;
+      margin-right: 6em;
+  }
 }

@@ -1,13 +1,4 @@
-.tooltip {
-    background-color: #E60000;
-    width: 55px;
-    height: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.activity {
+.wrapper {    
     margin-bottom: 3em;
     width: 835px; 
     height: 320px;
@@ -19,48 +10,53 @@
     padding: 25px;
 }
 
-@media(max-width: 1025px) {
-    .activity {
-        padding-left: 0;
-    }
-}
-
-.entete {
+.head {
     display: flex;
     justify-content: space-between;
 }
 
-.activity-title {
+.titlea-activity {
     font-size: 15px;
     line-height: 24px;
     color: #20253A;
 }
 
-.activity-legend {
+.legend {
     display: flex;
 }
 
-.text-legend {
-    font-weight: 500;
-    font-size: 14px;
-    color: #74798c;
-    margin-left: 10px;
+.info {
+    display: flex;
+    align-items: center;
 }
 
 .icon {
     height: 8px;
     width: 8px;
     border-radius: 50%;
-    align-self: center;
     margin-left: 30px;
 }
 
-.icon-weight {
-    color: #282D30;
-    /* Couleur de l'icône de poids */
+.tooltip {
+    background-color: #E60000;
+    width: 55px;
+    height: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.icon-calories {
-    color: #E60000;
-    /* Couleur de l'icône de calories */
+.kg {
+    background-color: #282D30;
+}
+
+.kcal {
+    background-color: #E60000;
+}
+
+.info p {
+    font-weight: 500;
+    font-size: 14px;
+    color: #74798c;
+    margin-left: 10px;
 }

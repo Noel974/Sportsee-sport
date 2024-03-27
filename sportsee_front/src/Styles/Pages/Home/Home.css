@@ -1,28 +1,26 @@
 .main {
     margin-top: 15px;
     display: flex;
-    flex-wrap: wrap; /* Permet aux cartes de se mettre en ligne si l'espace est insuffisant */
-    justify-content: center; /* Centre les cartes horizontalement */
+    flex-wrap: wrap; 
+    justify-content: center; 
 }
 
 .title {
-
     text-align: center; /* Centre le texte */
     width: 100%; /* Utilisation de la largeur totale */
 }
 
 .card {
-    flex: 0 0 calc(33.33% - 20px); /* Utilisation d'un tiers de la largeur, avec un espacement de 20px entre les cartes */
-    margin: 10px; /* Espacement entre les cartes */
+    flex: 0 0 calc(33.33% - 20px);
+    margin: 10px; 
     background-color: #f0f0f0;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Média requise pour le responsive sur mobile */
 @media (max-width: 768px) {
     .card {
-        flex: 0 0 calc(50% - 20px); /* Utilisation de la moitié de la largeur sur les écrans plus petits */
+        flex: 0 0 calc(50% - 20px);
     }
 }

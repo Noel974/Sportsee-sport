@@ -8,7 +8,7 @@ import { NavLink } from 'react-router-dom';
 
 function Slide() {
     return ( 
-        <div className="slide">
+        <div className="Slide">
             <div className="SlideNav">
                 <div className="SlideNavList">
                     <NavLink to='#'><img src={yoga} alt="yoga" /></NavLink>

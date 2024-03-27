@@ -4,19 +4,19 @@ import { ResponsiveContainer, LineChart, Line, XAxis, YAxis, Tooltip } from "rec
 import PropTypes from 'prop-types';
 
 
-const SessionsToolType = ({ active, payload }) => {
+const SessionsDate = ({ active, payload }) => {
     //La Fonction prend deux parmetres active et payload
     if (active) {
         return (
-            <div className="tooltip">
-                <p>{payload[0].value}min</p>
+            <div className="date">
+                <p className="value">{payload[0].value}min</p>
             </div>
         );
     }
     return null;
 };
 
-SessionsToolType.propTypes = {
+SessionsDate.propTypes = {
     active: PropTypes.bool,
     payload: PropTypes.array,
 };
@@ -28,12 +28,12 @@ function AverageSsession() {
 
     return (
         <div className="average">
-            <div className="entete"><h2 className="activity-title">Durée moyenne des sessions</h2></div>
+            <h2 className="entete">Durée moyenne des sessions</h2>
             <ResponsiveContainer width='100%' height='100%'>
                 <LineChart data={data} >
                     <XAxis type="category" dataKey="day" tickLine={false} tick={{ fontSize: 14, stroke: 'rgba(255, 255, 255, 0.7)' }} />
                     <YAxis dataKey="sessionLength" domain={[0, 'dataMax + 30']} hide={true} />
-                    <Tooltip content={<SessionsToolType />} />
+                    <Tooltip content={<SessionsDate />} />
                     <Line type="monotone" padding={{ left: 10 }} dataKey="sessionLength" stroke="rgba(255, 255, 255, 0.7)" strokeWidth={2} dot={false} activeDot={{ r: 4, strokeWidth: 4, stroke: 'white' }} />
                 </LineChart>
             </ResponsiveContainer>

@@ -1,6 +1,6 @@
 /* Header */
 .profil {
-    margin-bottom: 40px;
+  margin-bottom: 40px;
   }
   
   @media (max-width: 1203px) {
@@ -12,8 +12,8 @@
   /* Title */
   .Bienvenu {
     font-weight: 600;
-    font-size: 48px;
-    margin-bottom: 40px;
+    font-size:48px;
+    margin-bottom:40px;
   }
   
   /* Name */
