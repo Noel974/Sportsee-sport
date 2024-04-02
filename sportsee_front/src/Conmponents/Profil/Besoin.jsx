@@ -8,12 +8,13 @@ import fatIcon from "../../Assets/Logo/fatIcon.svg";
 const KeyData = ({ icon, info, text }) => {
     return (
         <div className="keydata">
-        <img src={icon} alt="calories icon"/>
-        <div className="infos">
-            <p className="infosData">{info}</p>
-            <p className="infosText">{text}</p>
+            <img src={icon} alt="calories icon"/>
+            <div className="infos">
+                <p className="infosData">{info}</p>
+                <p className="infosText">{text}</p>
+            </div>
         </div>
-    </div> );
+    );
 };
 
 KeyData.propTypes = {
@@ -23,17 +24,30 @@ KeyData.propTypes = {
 };
 
 function Nutrition({ data }) {
+    console.log("Data passed to Nutrition component:", data);
+    
+    if (!data || !data.keyData) {
+        console.log("Data or keyData is missing.");
+        return null; // Or display some fallback UI
+    }
+
+    console.log("Calorie count:", data.keyData.calorieCount);
+    console.log("Protein count:", data.keyData.proteinCount);
+    console.log("Carbohydrate count:", data.keyData.carbohydrateCount);
+    console.log("Lipid count:", data.keyData.lipidCount);
+
     return (
-      <aside className="aside">
-        <KeyData icon={caloriesIcon} info={`${data.keyData.calorieCount}kCal`} text='Calories' />
-        <KeyData icon={proteinsIcon} info={`${data.keyData.proteinCount}g`} text='Proteines' />
-        <KeyData icon={carbsIcon} info={`${data.keyData.carbohydrateCount}g`} text='Glucides' />
-        <KeyData icon={fatIcon} info={`${data.keyData.lipidCount}g`} text='Lipides' />
-      </aside>
+        <aside className="aside">
+            <KeyData icon={caloriesIcon} info={`${data.keyData.calorieCount}kCal`} text='Calories' />
+            <KeyData icon={proteinsIcon} info={`${data.keyData.proteinCount}g`} text='Proteines' />
+            <KeyData icon={carbsIcon} info={`${data.keyData.carbohydrateCount}g`} text='Glucides' />
+            <KeyData icon={fatIcon} info={`${data.keyData.lipidCount}g`} text='Lipides' />
+        </aside>
     );
-  }
-  
-  export default Nutrition;
-  Nutrition.propTypes = {
+}
+
+export default Nutrition;
+
+Nutrition.propTypes = {
     data: PropTypes.object.isRequired,
 };
