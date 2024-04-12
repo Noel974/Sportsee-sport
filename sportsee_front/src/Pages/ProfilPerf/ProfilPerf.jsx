@@ -1,6 +1,11 @@
 import React from 'react';
+import { useParams } from 'react-router-dom';
 
 import MyUser from "../../Outils/Userdata.jsx";
+import MyActivity from '../../Outils/Activitydata.jsx';
+import MyPerformance from "../../Outils/Performancedata.jsx";
+import MyAverageSessions from '../../Outils/AverageSessionssata.jsx';
+
 import Profil from '../../Conmponents/Profil/Profil';
 import Activity from '../../Conmponents/Profil/Activity.jsx';
 import ScoreProfil from '../../Conmponents/Profil/Score.jsx';
@@ -11,30 +16,34 @@ import Nutrition from '../../Conmponents/Profil/Besoin.jsx';
 
 
 function ProfilPerf() {
-    const data = MyUser();
+    const {id} = useParams()
+    const userData = MyUser(id);
+    const activitydata = MyActivity(id);
+    const averagesessiondata = MyAverageSessions(id);    
+    const performancedata = MyPerformance(id);
 
     // Si les données ne sont pas encore chargées, on retourne null
-    if (!data) return null;
+    if (!userData ||!activitydata || !performancedata || !averagesessiondata ) return null;
 
     return (
 <div className='ProfilPerf'>
         <div className='Profil'>
         {/* Utilisation des informations de l'utilisateur pour afficher le composant Profil */}
-        <Profil name={data.userInfos.firstName} />
+        <Profil name={userData.firstName} />
         <div className='contenu-besoin'>
                 <section>
                     {/* Utilisation des informations de l'utilisateur pour afficher le composant Activity */}
-                    <Activity data={data.activityData} />
+                    <Activity data={activitydata.sessions} />
                     <div className='contenu-chart'>
                         {/* Utilisation des informations de l'utilisateur pour afficher le composant AverageSsession */}
-                        <AverageSsession />
+                        <AverageSsession data={averagesessiondata.sessions}  />
                         {/* Utilisation des informations de l'utilisateur pour afficher le composant Performance */}
-                        <Performance />
+                        <Performance data={performancedata} />
                         {/* Utilisation des informations de l'utilisateur pour afficher le composant ScoreProfil */}
-                        <ScoreProfil data={data} />
+                        <ScoreProfil data={userData} />
                     </div>
                 </section>
-                <Nutrition data={data}/>
+                <Nutrition data={userData}/>
             </div>
             </div>
     </div>

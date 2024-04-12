@@ -1,13 +1,13 @@
 import React from "react";
-// import Hooks Activity Data
-import MyActivity from "../../Outils/Activitydata";
+
 import PropTypes from 'prop-types';
 import { Bar, BarChart, CartesianGrid, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
 
 
 const CustomTooltip = ({ active, payload }) => {
     //La Fonction prend deux parmetres active et payload
-    if (active) {
+    console.log(active, payload);
+    if (active && payload) {
         return (
             <div className="tooltip">
                 <p>{payload[0].value}Kg</p>
@@ -23,11 +23,17 @@ CustomTooltip.propTypes = {
     payload: PropTypes.array,
 };
 
-function Activity() {
-    const data = MyActivity();
-    // Si les donnés ne sont pas encore recuperés, on retourne null
-    if (!data) return null;
+function Activity ({ data })  {
+    if (!Array.isArray(data)) {
+        return null; // Si data n'est pas un tableau, retournez null
+    }
 
+    // Ajoute une nouvelle propriété pour le numéro du jour
+    const dataWithDayNumber = data.map((item, index) => ({
+      ...item,
+      dayNumber: index + 1,
+    }))
+    
     return (   
     <div className="wrapper">
     <div className="head">
@@ -44,7 +50,7 @@ function Activity() {
         </div>
     </div>
         <ResponsiveContainer>
-            <BarChart data={data} barGap={8} barCategoryGap={1}>
+            <BarChart data={dataWithDayNumber} barGap={8} barCategoryGap={1}>
                 <CartesianGrid vertical={false} strokeDasharray="1 1" />
                 <XAxis dataKey="day" tickLine={false} tick={{ fontSize: 14 }} dy={15} />
                 <YAxis yAxisId="kilogram" dataKey="kilogram" type="number" domain={['dataMin - 2', 'dataMax + 1']} tickCount={3} axisLine={false} orientation="right" tickLine={false} tick={{ fontSize: 14 }} dx={15} />

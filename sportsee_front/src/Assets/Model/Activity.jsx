@@ -1,16 +1,13 @@
-class UserActivity {
-    constructor(userId, sessions) {
-        this.userId = userId;
-        this.sessions = sessions;
+class ActivityModel {
+    constructor({ userId, sessions }) {
+      this.userId = userId
+      this.sessions = sessions.map((session, index) => ({
+        ...session,
+        day: index + 1, // Transforme la journée en numéro
+        kilogram: session.kilogram, // Ajout du poids en kg
+        calories: session.calories, // Ajout des calories
+      }))
     }
-
-    getTotalCaloriesBurned() {
-        return this.sessions.reduce((total, session) => total + session.calories, 0);
-    }
-
-    getAverageWeight() {
-        const totalWeight = this.sessions.reduce((total, session) => total + session.kilogram, 0);
-        return totalWeight / this.sessions.length;
-    }
-}
-export default UserActivity ;
+  }
+  
+  export default ActivityModel

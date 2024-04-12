@@ -1,12 +1,7 @@
 import React from "react";
-import MyPerformance from "../../Outils/Performancedata";
 import {Radar,RadarChart,PolarGrid,PolarAngleAxis,ResponsiveContainer} from "recharts";
 
-function Performance() {
-    const data = MyPerformance();
-    // Si les donnés ne sont pas encore recuperés, on retourne null
-    if (!data) return null;
-
+function Performance({data}) {
     return (
         <div className="performance">
             <ResponsiveContainer width="100%" height="100%">

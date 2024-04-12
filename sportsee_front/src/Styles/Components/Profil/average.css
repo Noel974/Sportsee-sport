@@ -1,6 +1,6 @@
 .average{
     position: relative;
-	width: 258px;
+	width: 260px;
 	height: 263px;
 	display: flex;
 	flex-direction: column;
@@ -18,8 +18,6 @@
 }
 .date {
 	background-color:white;
-	width:45px;
-	height:30px;
 	display:flex;
 	flex-direction:column;
 	align-items:center;

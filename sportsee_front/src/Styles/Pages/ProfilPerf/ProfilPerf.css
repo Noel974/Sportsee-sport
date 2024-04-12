@@ -1,6 +1,6 @@
 .ProfilPerf {
   display: flex;
-  margin-top: 35px;
+  margin-top: 20px;
   margin-left: 150px;
 }
 
@@ -33,12 +33,12 @@
 
 .aside {
   display: flex;
-  flex-wrap: wrap;
+  /*flex-wrap: wrap
   justify-content: space-between;
-  max-width: 835px;
+  max-width: 835px;*/
   flex-direction: column;
   margin: auto;
-  margin-left:0;
+  padding: 2em;
 }
 @media (max-width: 1208px) {
   .aside {

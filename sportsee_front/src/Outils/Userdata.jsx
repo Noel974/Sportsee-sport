@@ -1,25 +1,26 @@
 import { useState, useEffect } from 'react';
-import {getUserInfos} from "../ServiceAPI/ServiceAPI";
+import { getUserInfos } from "../ServiceAPI/ServiceAPI";
 import { useParams } from "react-router-dom";
 
 function MyUser() {
-    const [data, setData] = useState(null); // Utilisation de null comme état initial
-    const {id} = useParams();
+    const [userData, setUserData] = useState(null); // Utilisation de null comme état initial
+    const { id } = useParams();
 
     useEffect(() => {
-        const getData = async () => {
+        const fetchData = async () => {
             try {
-                const response = await getUserInfos(id);
-                setData(response.data); // Stockage de la réponse de l'API
+                const userResponse = await getUserInfos(id);
+                setUserData(userResponse); // Stockage de la réponse de l'API
             } catch (error) {
                 console.error('Erreur lors de la récupération des données utilisateur :', error);
                 alert('Erreur lors de la récupération des données utilisateur');
             }
         };
 
-        getData();
+        fetchData();
     }, [id]);
     
-    return data;
+    return userData; // Retourner les données de l'utilisateur
 }
+
 export default MyUser;
