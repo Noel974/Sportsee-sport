@@ -1,0 +1,10 @@
+.main {
+    margin-top: 25px;
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center; 
+}
+.text{
+    text-align: center; /* Centre le texte */
+    width: 100%; /* Utilisation de la largeur totale */
+}

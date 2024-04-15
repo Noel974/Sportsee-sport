@@ -7,7 +7,8 @@ import {performanceData, averageSessionsData, activityData } from '../Assets/Dat
 
 // Constantes
 const API_URL = process.env.REACT_APP_API_URL;
-const MOCK_API = process.env.REACT_APP_MOCK_API ===  'true';
+const MOCK_API = process.env.REACT_APP_MOCK_API ===  '';
+
 
 /**
  * Cette fonction est utilisée pour récupérer des données à partir d'une source de données mock ou d'une API.
@@ -24,8 +25,7 @@ const MOCK_API = process.env.REACT_APP_MOCK_API ===  'true';
 const fetchData = async (userId, resource, Model, mockData, baseUrl, useMock) => {
     try {
       // Si useMock est vrai, utilisez les données mock.
-      if (useMock) {
-        console.log(mockData[userId]);
+      if (useMock) {;
         const data = mockData[userId];
         // Si aucune donnée mock n'est disponible pour cet utilisateur, lancez une erreur.
         if (!data) throw new Error(`No ${resource} data for user ${userId}`);
@@ -34,7 +34,7 @@ const fetchData = async (userId, resource, Model, mockData, baseUrl, useMock) =>
       } else {
         // Sinon, récupérez les données de l'API.
         const response = await axios.get(`${baseUrl}${userId}/${resource}`);
-        const data = await response.json();
+        const data = response.data;
         // Retournez une nouvelle instance du modèle avec les données de l'API.
         return new Model(data.data);
       }
@@ -45,8 +45,6 @@ const fetchData = async (userId, resource, Model, mockData, baseUrl, useMock) =>
     }
   };
   
-
-console.log(API_URL);
 
 /**
  * Fonction asynchrone pour récupérer les informations d'un utilisateur à partir de son ID.

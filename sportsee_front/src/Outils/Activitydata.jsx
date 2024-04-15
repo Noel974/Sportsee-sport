@@ -10,7 +10,7 @@ function MyActivity() {
     useEffect(() => {
         getUserActivity(id)
         .then(activityData => setActivity(activityData))
-        .catch(() => navigate('/not-found'))
+        .catch(() => navigate('/Error'))
     }, [id, navigate])
   
     return activity

@@ -11,7 +11,7 @@ function MyAverageSessions() {
     useEffect(() => {
         getUserAverageSessions(id)
         .then(averageSessionsData => setAverageSessions(averageSessionsData))
-        .catch(() => navigate('/not-found'))
+        .catch(() => navigate('/Error'))
     }, [id, navigate])
   
     return averageSessionsData
