@@ -9,7 +9,6 @@ import {performanceData, averageSessionsData, activityData } from '../Assets/Dat
 const API_URL = process.env.REACT_APP_API_URL;
 const MOCK_API = process.env.REACT_APP_MOCK_API ===  '';
 
-
 /**
  * Cette fonction est utilisée pour récupérer des données à partir d'une source de données mock ou d'une API.
  *

@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import { getUserInfos } from '../../ServiceAPI/ServiceAPI';
 
 function HomePage() {
+    const navigate = useNavigate();
+    
     const id1 = 12;
     const id2 = 18;
     console.log(id1, id2);
@@ -11,14 +13,18 @@ function HomePage() {
 
     useEffect(() => {
         const fetchUserInfos = async () => {
-            const userInfo1 = await getUserInfos(id1);
-            const userInfo2 = await getUserInfos(id2);
-            setUser1(userInfo1);
-            setUser2(userInfo2);
+            try {
+                const userInfo1 = await getUserInfos(id1);
+                const userInfo2 = await getUserInfos(id2);
+                setUser1(userInfo1);
+                setUser2(userInfo2);
+            } catch (error) {
+                console.error("Une erreur s'est produite lors de la récupération des informations de l'utilisateur :", error);
+                navigate('/error'); // Naviguer vers une page d'erreur
+            }
         };
         fetchUserInfos();
-    }, [id1, id2]);
-
+    }, [id1, id2, navigate]); // Ajouter navigate comme dépendance
     return (
         <main className="main">
             <h2 className="title"> Les USER</h2>

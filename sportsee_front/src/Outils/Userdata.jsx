@@ -1,11 +1,11 @@
 import { useState, useEffect } from 'react';
 import { getUserInfos } from "../ServiceAPI/ServiceAPI";
-import { useParams, useNavigate } from "react-router-dom"; // Ajoutez useNavigate
+import { useParams, useNavigate } from "react-router-dom"; 
 
 function MyUser() {
-    const [userData, setUserData] = useState(null); // Utilisation de null comme état initial
+    const [userData, setUserData] = useState(null); 
     const { id } = useParams();
-    const navigate = useNavigate(); // Ajoutez cette ligne
+    const navigate = useNavigate(); 
 
     useEffect(() => {
         const fetchData = async () => {
@@ -15,12 +15,12 @@ function MyUser() {
             } catch (error) {
                 console.error('Erreur lors de la récupération des données utilisateur :', error);
                 alert('Erreur lors de la récupération des données utilisateur');
-                navigate('/Error'); // Ajoutez cette ligne
+                navigate('/Error'); 
             }
         };
 
         fetchData();
-    }, [id, navigate]); // Ajoutez navigate ici
+    }, [id, navigate]); 
     
     return userData; // Retourner les données de l'utilisateur
 }
