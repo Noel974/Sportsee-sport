@@ -1,10 +1,19 @@
 .main {
-    margin-top: 25px;
+    margin-top: 75px;
     display: flex;
     flex-wrap: wrap; 
     justify-content: center; 
 }
+.error{
+    color:red;
+    font-size: xx-large;
+}
 .text{
     text-align: center; /* Centre le texte */
     width: 100%; /* Utilisation de la largeur totale */
+}
+.text1{
+    margin-top: 15PX;
+    color: red;
+    font-size: large;
 }
