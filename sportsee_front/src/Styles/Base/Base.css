@@ -1,30 +1,23 @@
-/* Reset */
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Body */
+
 body {
   min-height: 100vh;
   font-family: "Roboto", sans-serif;
 }
 
-/* Grid Layout */
-.app{
+.app {
   display: grid;
-  width: 100vw;
-  height: 100vh;
+  width: 1024px;
+  height: 768px;
   grid-template-rows: 5.75rem repeat(3, 1fr);
   grid-template-columns: 7.5rem repeat(4, 1fr);
   overflow: hidden;
   background: #ffffff;
 }
 
-/* Responsive Font Size */
-@media screen and (max-width: 1280px) {
-  :root {
-    font-size: 12px;
-  }
-}

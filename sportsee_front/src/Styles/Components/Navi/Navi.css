@@ -25,4 +25,9 @@
   color: white;
   font-weight: 500;
   font-size: 24px;
+  transition: color 0.3s ease;
+}
+
+.header nav a:hover {
+  color: #ff0000; /* Changez cette couleur selon vos préférences */
 }
