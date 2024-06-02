@@ -35,4 +35,4 @@ REACT_APP_API_URL="url de l'api".
 REACT_APP_MOCK_API= false 
 
 ## Navigation Mock API 
-En définissant la constante MOCK_API sur true ou false dans le fichier serviceAPI, vous pouvez activer ou désactiver la navigation entre les données mock et l'API. N'oubliez pas de mettre à jour les valeurs correspondantes dans le fichier .env et de redémarrer le serveur pour appliquer les modifications.
+Dans le fichier serviceAPI, vous pouvez activer ou désactiver l’utilisation de données factices en définissant la constante MOCK_API sur true ou false. Si vous modifiez cette valeur, n’oubliez pas de mettre à jour la valeur correspondante dans le fichier .env et de redémarrer le serveur pour que les modifications prennent effet.
