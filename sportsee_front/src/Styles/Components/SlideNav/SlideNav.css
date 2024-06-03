@@ -33,7 +33,7 @@
     height: 44px;
     width: 44px;
     margin-bottom: 20px;
-    transition: transform 0.3s ease;
+    transition: background-color 0.3s ease;
 }
 
 .SlideNavList a:hover,
@@ -42,6 +42,7 @@
     outline: none;
     box-shadow: 0 0 10px #ff0404; 
 }
+
 
 
 .NavText {
